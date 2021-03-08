@@ -12,7 +12,10 @@ pipeline {
                   }
             post {
                  always {
-                        mail to: 'ordina.jenkins@gmail.com', subject: 'The Pipeline ran :)', body: 'I ran :)'
+                        junit 'target/surefire-reports/*.xml'
+                        mail to: 'ordina.jenkins@gmail.com',
+                        subject: 'The Pipeline ran :)',
+                        body: 'I ran :)'
                         }
                 }
         }
