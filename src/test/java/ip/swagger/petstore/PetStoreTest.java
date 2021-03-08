@@ -8,9 +8,8 @@ public class PetStoreTest {
 
     @Test
     @DisplayName("Basic Test")
-    void basitTest() {
+    void basitTest(){
         System.out.println("This is a very basic test");
         Assertions.assertTrue(true);
-
     }
 }
