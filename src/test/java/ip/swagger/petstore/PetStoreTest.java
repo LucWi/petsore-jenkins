@@ -10,6 +10,7 @@ public class PetStoreTest {
     @DisplayName("Basic Test")
     void basicTest(){
         System.out.println("This is a very basic test");
+        Assertions.fail();
         Assertions.assertTrue(false);
     }
 }
