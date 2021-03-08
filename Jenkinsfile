@@ -15,7 +15,8 @@ pipeline {
                         junit 'target/surefire-reports/*.xml'
                         mail to: 'ordina.jenkins@gmail.com',
                         subject: 'The Pipeline ran :)',
-                        body: ${FILE,path="target/surefire-reports/*.xml"}
+                        body: ${FILE,path="target/surefire-reports/*.xml"},
+                        mimeType: 'text/xml'
                         }
                 }
         }
