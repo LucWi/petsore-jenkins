@@ -7,9 +7,16 @@ pipeline {
                   }
             }
         stage('Test') {
-            steps {
-                   sh 'mvn surefire:test'
-                  }
+steps {
+
+ sh 'ls -a'
+
+ sh 'cat src/test/java/ip/swagger/petstore/PetStoreTest.java'
+
+ sh 'mvn surefire:test'
+
+
+}
             post {
                  always {
                         junit 'target/surefire-reports/*.xml'
