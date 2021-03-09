@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                   sh 'mvn clean compile'
+                   sh 'mvn clean test-compile'
                   }
             }
         stage('Test') {
             steps {
                 sh 'ls -a'
                 sh 'cat src/test/java/ip/swagger/petstore/PetStoreTest.java'
-                sh 'mvn test'
+                sh 'mvn surefire:test'
                 }
             post {
                  always {
