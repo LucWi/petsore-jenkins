@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'ls -a'
                 sh 'cat src/test/java/ip/swagger/petstore/PetStoreTest.java'
-                sh 'mvn surefire:test'
+                sh 'mvn test'
                 }
             post {
                  always {
