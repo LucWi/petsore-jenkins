@@ -19,5 +19,10 @@ pipeline {
                         }
                 }
         }
+        stage('AcceptenceTest') {
+            steps {
+                  sh echo 'acceptenceTest'
+                  }
+        }
     }
 }

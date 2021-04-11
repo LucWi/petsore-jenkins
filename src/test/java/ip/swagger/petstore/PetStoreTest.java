@@ -16,10 +16,10 @@ public class PetStoreTest {
 
     }
 
-    @Test
-    @DisplayName("Basic failing Test")
-    void basicFailingTest() {
-        System.out.println("This is a very basic failing test");
-        Assertions.assertTrue(false);
-    }
+//    @Test
+//    @DisplayName("Basic failing Test")
+//    void basicFailingTest() {
+//        System.out.println("This is a very basic failing test");
+//        Assertions.assertTrue(false);
+//    }
 }
