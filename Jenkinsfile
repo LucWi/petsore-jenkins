@@ -8,7 +8,7 @@ pipeline {
             }
         stage('UnitTest') {
             steps {
-                sh 'mvn surefire:test -Dgroups=""unit"'
+                sh 'mvn surefire:test -Dgroups="unit"'
                 }
             post {
                  always {
