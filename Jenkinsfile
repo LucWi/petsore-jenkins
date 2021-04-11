@@ -13,16 +13,21 @@ pipeline {
             post {
                  always {
                         junit 'target/surefire-reports/*.xml'
-                        emailext to: 'ordina.jenkins@gmail.com',
-                        subject: 'The Pipeline ran :)',
-                        body: '${FILE,path="target/surefire-reports/ip.swagger.petstore.PetStoreTest.txt"}'
+                        //emailext to: 'ordina.jenkins@gmail.com',
+                        //subject: 'The Pipeline ran :)',
+                        //body: '${FILE,path="target/surefire-reports/ip.swagger.petstore.PetStoreTest.txt"}'
                         }
                 }
         }
-        stage('AcceptenceTest') {
+        stage('acceptencetest') {
             steps {
-                  echo 'acceptenceTest'
+                sh 'mvn failsafe:verify -Dgroups="acceptence"'
                   }
+            post {
+                 always {
+                   junit 'target/surefire-reports/*.xml'
+                 }
+            }
         }
     }
 }
