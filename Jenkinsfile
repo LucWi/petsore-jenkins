@@ -6,9 +6,9 @@ pipeline {
                    sh 'mvn clean test-compile'
                   }
             }
-        stage('Test') {
+        stage('UnitTest') {
             steps {
-                sh 'mvn surefire:test'
+                sh 'mvn surefire:test -Dgroups=""unit"'
                 }
             post {
                  always {

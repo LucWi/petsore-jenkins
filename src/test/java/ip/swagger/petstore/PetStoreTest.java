@@ -2,8 +2,10 @@ package ip.swagger.petstore;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("unit")
 public class PetStoreTest {
 
     @Test
