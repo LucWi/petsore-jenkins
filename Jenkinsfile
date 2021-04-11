@@ -21,7 +21,7 @@ pipeline {
         }
         stage('AcceptenceTest') {
             steps {
-                  sh echo 'acceptenceTest'
+                  echo 'acceptenceTest'
                   }
         }
     }
